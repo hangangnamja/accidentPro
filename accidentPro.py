@@ -3,6 +3,8 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
+import os
+import streamlit as st
 
 # 컬럼 이름 설정
 time_col = "Time (s)"
@@ -11,6 +13,9 @@ y_col = "Linear Acceleration y (m/s^2)"
 z_col = "Linear Acceleration z (m/s^2)"
 abs_col = "Absolute acceleration (m/s^2)"
 
+st.write("현재 작업 디렉터리:", os.getcwd())
+st.write("현재 파일 목록:", os.listdir('.'))
+st.write("walking 폴더 내 파일 목록:", os.listdir('walking'))
 
 # 위험 탐지 함수
 def detect_risk_spikes(df, abs_threshold=20, axis_threshold=15):
