@@ -35,9 +35,9 @@ st.title("운동 데이터 분류 및 위험 상태 탐지")
 # 1. 학습용 데이터 로드 (로컬 csv파일 경로 수정 필요)
 @st.cache_data
 def load_training_data():
-    walking_file = "walk\\walk.csv"
-    running_file = "run\\run.csv"
-    stairs_file = "stair\\stair.csv"
+    walking_file = "walk/walk.csv"
+    running_file = "run/run.csv"
+    stairs_file = "stair/stair.csv"
 
     df_walking = pd.read_csv(walking_file)
     df_running = pd.read_csv(running_file)
