@@ -15,7 +15,7 @@ abs_col = "Absolute acceleration (m/s^2)"
 
 st.write("현재 작업 디렉터리:", os.getcwd())
 st.write("현재 파일 목록:", os.listdir('.'))
-st.write("walking 폴더 내 파일 목록:", os.listdir('walking'))
+st.write("walk 폴더 내 파일 목록:", os.listdir('walk'))
 
 # 위험 탐지 함수
 def detect_risk_spikes(df, abs_threshold=20, axis_threshold=15):
